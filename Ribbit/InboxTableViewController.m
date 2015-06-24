@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.moviePlayer = [[MPMoviePlayerController alloc] init];
     
     if (![PFUser currentUser]) [self performSegueWithIdentifier:@"showLogIn" sender:self];
 }
@@ -25,7 +26,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Message"];
     [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -53,7 +54,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
-    cell.textLabel.text = [message objectForKey:@"senderId"];
+    cell.textLabel.text = [message objectForKey:@"senderName"];
     
     NSString *fileType = [message objectForKey:@"fileType"];
     if ([fileType isEqualToString:@"image"]) {
@@ -64,13 +65,33 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     
     NSString *fileType = [self.selectedMessage objectForKey:@"fileType"];
     if ([fileType isEqualToString:@"image"]) {
         [self performSegueWithIdentifier:@"showImage" sender:self];
     } else {
+        PFFile *videoFile = [self.selectedMessage objectForKey:@"file"];
+        NSURL *fileURL = [NSURL URLWithString:[videoFile url]];
+        self.moviePlayer.contentURL = fileURL;
+        [self.moviePlayer prepareToPlay];
         
+        // deprecated :(
+        // [self.moviePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        
+        [self.view addSubview:self.moviePlayer.view];
+        [self.moviePlayer setFullscreen:YES animated:YES];
+    }
+    
+    NSMutableArray *recipientIds = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"recipientIds"]];
+    
+    if ([recipientIds count] == 1) {
+        [self.selectedMessage deleteInBackground];
+    } else {
+        [recipientIds removeObject:[[PFUser currentUser] objectId]];
+        [self.selectedMessage setObject:recipientIds forKey:@"recipientIds"];
+        [self.selectedMessage deleteInBackground];
     }
     
 }

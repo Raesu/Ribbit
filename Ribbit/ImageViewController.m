@@ -30,7 +30,10 @@
     [super viewDidAppear:animated];
     
     [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(timeout) userInfo:nil repeats:NO];
-    
+}
+
+- (void)timeout {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
