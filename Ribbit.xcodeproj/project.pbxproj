@@ -14,9 +14,6 @@
 		FA089BF31B22C342008D2174 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA089BF21B22C342008D2174 /* MainStoryboard.storyboard */; };
 		FA089C031B22CE6F008D2174 /* InboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C021B22CE6F008D2174 /* InboxTableViewController.m */; };
 		FA089C051B22D0E2008D2174 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA089C041B22D0E2008D2174 /* Default-568h@2x.png */; };
-		FA089C101B22D743008D2174 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C0D1B22D743008D2174 /* Bolts.framework */; };
-		FA089C111B22D743008D2174 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C0E1B22D743008D2174 /* Parse.framework */; };
-		FA089C121B22D743008D2174 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C0F1B22D743008D2174 /* ParseUI.framework */; };
 		FA089C141B22D78D008D2174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C131B22D78D008D2174 /* UIKit.framework */; };
 		FA089C161B22D79D008D2174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C151B22D79D008D2174 /* Foundation.framework */; };
 		FA089C181B22D7AF008D2174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA089C171B22D7AF008D2174 /* CoreGraphics.framework */; };
@@ -35,6 +32,11 @@
 		FA089C371B230C23008D2174 /* EditFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C361B230C23008D2174 /* EditFriendsTableViewController.m */; };
 		FA089C3A1B231C64008D2174 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C391B231C64008D2174 /* FriendsTableViewController.m */; };
 		FA089C3D1B24194C008D2174 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C3C1B24194C008D2174 /* CameraViewController.m */; };
+		FA68B66A1B3AB50500A1B633 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6681B3AB50500A1B633 /* Parse.framework */; };
+		FA68B66B1B3AB50500A1B633 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6691B3AB50500A1B633 /* ParseUI.framework */; };
+		FA68B66D1B3AB83A00A1B633 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B66C1B3AB83A00A1B633 /* Accounts.framework */; };
+		FA68B66F1B3AB84300A1B633 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B66E1B3AB84300A1B633 /* Social.framework */; };
+		FA68B6711B3AB91800A1B633 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6701B3AB91800A1B633 /* Bolts.framework */; };
 		FAA55CCB1B318C44004E5EA6 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA55CCA1B318C44004E5EA6 /* ImageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +64,6 @@
 		FA089C011B22CE6F008D2174 /* InboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewController.h; sourceTree = "<group>"; };
 		FA089C021B22CE6F008D2174 /* InboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewController.m; sourceTree = "<group>"; };
 		FA089C041B22D0E2008D2174 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		FA089C0D1B22D743008D2174 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		FA089C0E1B22D743008D2174 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		FA089C0F1B22D743008D2174 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		FA089C131B22D78D008D2174 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA089C151B22D79D008D2174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA089C171B22D7AF008D2174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +88,11 @@
 		FA089C391B231C64008D2174 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
 		FA089C3B1B24194C008D2174 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		FA089C3C1B24194C008D2174 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		FA68B6681B3AB50500A1B633 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FA68B6691B3AB50500A1B633 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		FA68B66C1B3AB83A00A1B633 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		FA68B66E1B3AB84300A1B633 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FA68B6701B3AB91800A1B633 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FAA55CC91B318C44004E5EA6 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		FAA55CCA1B318C44004E5EA6 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA68B66F1B3AB84300A1B633 /* Social.framework in Frameworks */,
+				FA68B66D1B3AB83A00A1B633 /* Accounts.framework in Frameworks */,
 				FA089C2E1B22D944008D2174 /* libz.dylib in Frameworks */,
 				FA089C2C1B22D932008D2174 /* MobileCoreServices.framework in Frameworks */,
 				FA089C2A1B22D92B008D2174 /* libsqlite3.dylib in Frameworks */,
@@ -108,12 +114,12 @@
 				FA089C1D1B22D806008D2174 /* AudioToolbox.framework in Frameworks */,
 				FA089C1E1B22D806008D2174 /* CFNetwork.framework in Frameworks */,
 				FA089C201B22D806008D2174 /* SystemConfiguration.framework in Frameworks */,
+				FA68B66A1B3AB50500A1B633 /* Parse.framework in Frameworks */,
 				FA089C181B22D7AF008D2174 /* CoreGraphics.framework in Frameworks */,
+				FA68B66B1B3AB50500A1B633 /* ParseUI.framework in Frameworks */,
+				FA68B6711B3AB91800A1B633 /* Bolts.framework in Frameworks */,
 				FA089C161B22D79D008D2174 /* Foundation.framework in Frameworks */,
 				FA089C141B22D78D008D2174 /* UIKit.framework in Frameworks */,
-				FA089C121B22D743008D2174 /* ParseUI.framework in Frameworks */,
-				FA089C111B22D743008D2174 /* Parse.framework in Frameworks */,
-				FA089C101B22D743008D2174 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +208,11 @@
 		FA089C0C1B22D6CF008D2174 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA68B66E1B3AB84300A1B633 /* Social.framework */,
+				FA68B66C1B3AB83A00A1B633 /* Accounts.framework */,
 				FA089C2D1B22D944008D2174 /* libz.dylib */,
+				FA68B6681B3AB50500A1B633 /* Parse.framework */,
+				FA68B6691B3AB50500A1B633 /* ParseUI.framework */,
 				FA089C2B1B22D932008D2174 /* MobileCoreServices.framework */,
 				FA089C291B22D92B008D2174 /* libsqlite3.dylib */,
 				FA089C271B22D82D008D2174 /* StoreKit.framework */,
@@ -212,13 +222,11 @@
 				FA089C191B22D806008D2174 /* AudioToolbox.framework */,
 				FA089C1A1B22D806008D2174 /* CFNetwork.framework */,
 				FA089C1B1B22D806008D2174 /* libz.1.1.3.dylib */,
+				FA68B6701B3AB91800A1B633 /* Bolts.framework */,
 				FA089C1C1B22D806008D2174 /* SystemConfiguration.framework */,
 				FA089C171B22D7AF008D2174 /* CoreGraphics.framework */,
 				FA089C151B22D79D008D2174 /* Foundation.framework */,
 				FA089C131B22D78D008D2174 /* UIKit.framework */,
-				FA089C0D1B22D743008D2174 /* Bolts.framework */,
-				FA089C0E1B22D743008D2174 /* Parse.framework */,
-				FA089C0F1B22D743008D2174 /* ParseUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 					"$(inherited)",
 					"/Users/ryansumme/Downloads/parse-library-1.7.4",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ribbit.xcodeproj",
 				);
 				INFOPLIST_FILE = Ribbit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -464,6 +473,7 @@
 					"$(inherited)",
 					"/Users/ryansumme/Downloads/parse-library-1.7.4",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ribbit.xcodeproj",
 				);
 				INFOPLIST_FILE = Ribbit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
