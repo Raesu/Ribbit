@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 - (IBAction)signUp:(id)sender;
+- (IBAction)dismiss:(id)sender;
 
 @end

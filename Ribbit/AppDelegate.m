@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [NSThread sleepForTimeInterval:1.5];
+    
     // Initialize Parse.
     [Parse setApplicationId:@"SKnd8cLmivFP7aLpmY6DiyphYLaXINyaxCZ4goXv"
                   clientKey:@"kbh2GKg7U8rv5zOGq1qcRtihi7gtL7VtPSaTnW96"];

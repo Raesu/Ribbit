@@ -17,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    if ([UIScreen mainScreen].bounds.size.height == 568) {
+        self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
+    }
 }
 
 - (IBAction)signUp:(id)sender {
@@ -48,5 +51,9 @@
     }
          
 
+}
+
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

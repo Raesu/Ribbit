@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface InboxTableViewController : UITableViewController
+@interface InboxViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *messages;
 @property (nonatomic, strong) PFObject *selectedMessage;

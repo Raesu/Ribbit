@@ -6,22 +6,23 @@
 //  Copyright (c) 2015 Ryan Summe. All rights reserved.
 //
 
-#import "FriendsTableViewController.h"
-#import "EditFriendsTableViewController.h"
+#import "FriendsViewController.h"
+#import "EditFriendsViewController.h"
 
-@interface FriendsTableViewController ()
+@interface FriendsViewController ()
 
 @end
 
-@implementation FriendsTableViewController
+@implementation FriendsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
-}
+    }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+
     
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
@@ -63,7 +64,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqual:@"showFriendEdit"]) {
-        EditFriendsTableViewController *nextTVC = (EditFriendsTableViewController *)[segue destinationViewController];
+        EditFriendsViewController *nextTVC = (EditFriendsViewController *)[segue destinationViewController];
         nextTVC.friends = [NSMutableArray arrayWithArray:self.friends];
         NSLog(@"Executed");
     }

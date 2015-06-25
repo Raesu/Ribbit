@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Ryan Summe. All rights reserved.
 //
 
-#import "EditFriendsTableViewController.h"
+#import "EditFriendsViewController.h"
 
-@interface EditFriendsTableViewController ()
+@interface EditFriendsViewController ()
 
 @end
 
-@implementation EditFriendsTableViewController
+@implementation EditFriendsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

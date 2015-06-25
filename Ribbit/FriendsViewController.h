@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface FriendsTableViewController : UITableViewController
+@interface FriendsViewController : UITableViewController
 
 @property (strong, nonatomic) PFRelation *friendsRelation;
 @property (strong, nonatomic) NSArray *friends;

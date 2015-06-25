@@ -6,37 +6,41 @@
 //  Copyright (c) 2015 Ryan Summe. All rights reserved.
 //
 
-#import "InboxTableViewController.h"
+#import "InboxViewController.h"
 #import "LogInViewController.h"
 #import "ImageViewController.h"
 
-@interface InboxTableViewController ()
+@interface InboxViewController ()
 
 @end
 
-@implementation InboxTableViewController
+@implementation InboxViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.moviePlayer = [[MPMoviePlayerController alloc] init];
-    
-    if (![PFUser currentUser]) [self performSegueWithIdentifier:@"showLogIn" sender:self];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:NO];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Message"];
-    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            self.messages = objects;
-            [self.tableView reloadData];
-        }
-    }];
+    if ([PFUser currentUser]) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Message"];
+        [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+        [query orderByDescending:@"createdAt"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                self.messages = objects;
+                [self.tableView reloadData];
+            }
+        }];
+    } else {
+        [self performSegueWithIdentifier:@"showLogIn" sender:self];
+    }
 }
 
 #pragma mark - Table view data source
@@ -106,7 +110,7 @@
     if ([segue.identifier isEqualToString:@"showLogIn"]) {
         LogInViewController *lVC = (LogInViewController *)[segue destinationViewController];
         [lVC setHidesBottomBarWhenPushed:YES];
-        [[lVC navigationItem] setHidesBackButton:YES animated:NO];
+        // [[lVC navigationItem] setHidesBackButton:YES animated:NO];
     } else if ([segue.identifier isEqualToString:@"showImage"]) {
         ImageViewController *iVC = (ImageViewController *)[segue destinationViewController];
         [iVC setHidesBottomBarWhenPushed:YES];

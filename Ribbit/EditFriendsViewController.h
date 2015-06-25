@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface EditFriendsTableViewController : UITableViewController
+@interface EditFriendsViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *allUsers;
 @property (nonatomic, strong) PFUser *currentUser;

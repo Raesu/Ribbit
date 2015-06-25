@@ -18,7 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
+    if ([UIScreen mainScreen].bounds.size.height == 568) {
+        self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (IBAction)logIn:(id)sender {
