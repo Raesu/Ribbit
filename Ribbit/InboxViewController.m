@@ -15,10 +15,14 @@
 @end
 
 @implementation InboxViewController
+@dynamic refreshControl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.moviePlayer = [[MPMoviePlayerController alloc] init];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(retrieveMessages) forControlEvents:UIControlEventValueChanged];
 
 }
 
@@ -26,21 +30,7 @@
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:NO];
     
-    if ([PFUser currentUser]) {
-        PFQuery *query = [PFQuery queryWithClassName:@"Message"];
-        [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-        [query orderByDescending:@"createdAt"];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (error) {
-                NSLog(@"%@", error);
-            } else {
-                self.messages = objects;
-                [self.tableView reloadData];
-            }
-        }];
-    } else {
-        [self performSegueWithIdentifier:@"showLogIn" sender:self];
-    }
+    [self retrieveMessages];
 }
 
 #pragma mark - Table view data source
@@ -117,5 +107,28 @@
         [iVC setMessage:self.selectedMessage];
     }
 }
+
+- (void)retrieveMessages {
+    if ([PFUser currentUser]) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Message"];
+        [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+        [query orderByDescending:@"createdAt"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                self.messages = objects;
+                [self.tableView reloadData];
+            }
+            if ([self.refreshControl isRefreshing]) {
+                [self.refreshControl endRefreshing];
+            }
+        }];
+    } else {
+        [self performSegueWithIdentifier:@"showLogIn" sender:self];
+    }
+    
+}
+
 
 @end

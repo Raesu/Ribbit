@@ -30,13 +30,16 @@
 		FA089C371B230C23008D2174 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C361B230C23008D2174 /* EditFriendsViewController.m */; };
 		FA089C3A1B231C64008D2174 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C391B231C64008D2174 /* FriendsViewController.m */; };
 		FA089C3D1B24194C008D2174 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA089C3C1B24194C008D2174 /* CameraViewController.m */; };
-		FA68B66A1B3AB50500A1B633 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6681B3AB50500A1B633 /* Parse.framework */; };
+		FA68B66A1B3AB50500A1B633 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6681B3AB50500A1B633 /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FA68B66B1B3AB50500A1B633 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6691B3AB50500A1B633 /* ParseUI.framework */; };
 		FA68B66D1B3AB83A00A1B633 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B66C1B3AB83A00A1B633 /* Accounts.framework */; };
 		FA68B66F1B3AB84300A1B633 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B66E1B3AB84300A1B633 /* Social.framework */; };
 		FA68B6711B3AB91800A1B633 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6701B3AB91800A1B633 /* Bolts.framework */; };
 		FA68B6731B3ACDF100A1B633 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68B6721B3ACDF100A1B633 /* MediaPlayer.framework */; };
 		FA68B6911B3AE87A00A1B633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA68B6901B3AE87A00A1B633 /* Images.xcassets */; };
+		FA68B6941B40965700A1B633 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68B6931B40965700A1B633 /* TPKeyboardAvoidingScrollView.m */; };
+		FA68B6971B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68B6961B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		FA68B69A1B41E3C300A1B633 /* GravatarUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68B6991B41E3C300A1B633 /* GravatarUrlBuilder.m */; };
 		FAA55CCB1B318C44004E5EA6 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA55CCA1B318C44004E5EA6 /* ImageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +96,12 @@
 		FA68B6701B3AB91800A1B633 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FA68B6721B3ACDF100A1B633 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FA68B6901B3AE87A00A1B633 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA68B6921B40965700A1B633 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		FA68B6931B40965700A1B633 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		FA68B6951B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		FA68B6961B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		FA68B6981B41E3C300A1B633 /* GravatarUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravatarUrlBuilder.h; sourceTree = "<group>"; };
+		FA68B6991B41E3C300A1B633 /* GravatarUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarUrlBuilder.m; sourceTree = "<group>"; };
 		FAA55CC91B318C44004E5EA6 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		FAA55CCA1B318C44004E5EA6 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +190,12 @@
 		FA089BCA1B22C23F008D2174 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA68B6981B41E3C300A1B633 /* GravatarUrlBuilder.h */,
+				FA68B6991B41E3C300A1B633 /* GravatarUrlBuilder.m */,
+				FA68B6921B40965700A1B633 /* TPKeyboardAvoidingScrollView.h */,
+				FA68B6931B40965700A1B633 /* TPKeyboardAvoidingScrollView.m */,
+				FA68B6951B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				FA68B6961B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				FA68B6901B3AE87A00A1B633 /* Images.xcassets */,
 				FA089BCB1B22C23F008D2174 /* Info.plist */,
 				FA089BCC1B22C23F008D2174 /* main.m */,
@@ -333,9 +348,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA089C311B22DC28008D2174 /* LogInViewController.m in Sources */,
+				FA68B6941B40965700A1B633 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				FA089C341B22DC52008D2174 /* SignUpViewController.m in Sources */,
 				FA089C371B230C23008D2174 /* EditFriendsViewController.m in Sources */,
 				FA089C031B22CE6F008D2174 /* InboxViewController.m in Sources */,
+				FA68B69A1B41E3C300A1B633 /* GravatarUrlBuilder.m in Sources */,
+				FA68B6971B4098D900A1B633 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FA089BD01B22C23F008D2174 /* AppDelegate.m in Sources */,
 				FA089C3A1B231C64008D2174 /* FriendsViewController.m in Sources */,
 				FAA55CCB1B318C44004E5EA6 /* ImageViewController.m in Sources */,
